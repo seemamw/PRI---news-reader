@@ -48,7 +48,7 @@ angular.module('starter.controllers', [])
 	$scope.profile = Profiles.get($stateParams.profileId);
 })
 
-.controller('DashCtrl', function($http, $scope, $stateParams , Profiles) {
+.controller('DashCtrl', function($http, $scope, $stateParams , Profiles, $ionicFilterBar) {
   $scope.stories = [];
   function loadStories(params,callback) {
     $http.get("https://www.reddit.com/r/funny/new.json",{params: params})
@@ -58,6 +58,21 @@ angular.module('starter.controllers', [])
         stories.push(child.data);
       });
       callback(stories);
+    });
+  }
+
+  $scope.doRefresh = function () {
+    $scope.stories = window.Values;
+    $scope.$broadcast('scroll.refreshComplete');
+  }
+
+  $scope.showFilterBar = function () {
+    filterBar = $ionicFilterBar.show({
+      items: $scope.stories,
+      update: function (filteredItems) {
+        $scope.stories = filteredItems
+      }
+      //filterProperties : 'first_name'
     });
   }
    
