@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
-  'jett.ionic.filter.bar'])
+  'jett.ionic.filter.bar', 'ionic-timepicker'])
 
 .run(function($ionicPlatform , $rootScope, $timeout) {
   $ionicPlatform.ready(function() {
@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
 
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, ionicTimePickerProvider) {
   $stateProvider
 
     .state('app', {
@@ -93,7 +93,7 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
     views: {
       'menuContent': {
         templateUrl: 'templates/setting.html',
-    controller: 'DashCtrl'
+    controller: 'SetCtrl'
       }
      },
    authStatus: true
@@ -118,6 +118,17 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
       }
     }
   });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/login');
+
+  var timePickerObj = {
+    inputTime: (((new Date()).getHours() * 60 * 60) + ((new Date()).getMinutes() * 60)),
+    format: 12,
+    step: 15,
+    setLabel: 'Set',
+    closeLabel: 'Close'
+  };
+  ionicTimePickerProvider
+  ionicTimePickerProvider.configTimePicker(timePickerObj);
 });

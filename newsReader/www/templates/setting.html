@@ -1,34 +1,38 @@
 <ion-view view-title="Setting" hide-back-button="true">
 <ion-content class="outer-content">
-  <ion-list>
-  <ion-item>
-    <ion-range [(ngModel)]="singleValue" color="danger" pin="true"></ion-range>
-  </ion-item>
+  <h4>At what time do you wake up ?</h4>
+  <br><br><br>
 
-  <ion-item>
-    <ion-range min="-200" max="200" [(ngModel)]="saturation" color="secondary">
-      <ion-label range-left>-200</ion-label>
-      <ion-label range-right>200</ion-label>
-    </ion-range>
-  </ion-item>
+<div class="12HourTimePickerChildDiv">
+  <div class="row">
+    <span class="button-small col-25">
+        <button class="button button-clear button-small button-dark timePickerArrows marginBottom10"
+                ng-click="increaseHours()">
+          <i class="icon ion-chevron-up"></i></button>
+        <input type="text" placeholder="" ng-model="time.hours" class="ipBoxes timePickerBoxText" disabled>
+        <button class="button button-clear button-small button-dark timePickerArrows marginTop10"
+                ng-click="decreaseHours()">
+          <i class="icon ion-chevron-down"></i></button>
+    </span>
+    <label class="col-10 timePickerColon"> : </label>
+      <span class="button-small col-25">
+        <button class="button button-clear button-small button-dark timePickerArrows marginBottom10"
+                ng-click="increaseMinutes()"><i class="icon ion-chevron-up"></i></button>
+        <input type="text" placeholder="" ng-model="time.minutes" class="ipBoxes timePickerBoxText" disabled>
+        <button class="button button-clear button-small button-dark timePickerArrows marginTop10"
+                ng-click="decreaseMinutes()"><i class="icon ion-chevron-down"></i></button>
+      </span>
+    <label class="col-10 timePickerColon"> : </label>
+      <span class="button-small col-25">
+        <button class="button button-clear button-small button-dark timePickerArrows marginBottom10"
+                ng-click="changeMeridian()"><i class="icon ion-chevron-up"></i></button>
+        <input type="text" placeholder="" ng-model="time.meridian" class="ipBoxes timePickerBoxText" disabled>
+        <button class="button button-clear button-small button-dark timePickerArrows marginTop10"
+                ng-click="changeMeridian()"><i class="icon ion-chevron-down"></i></button>
+      </span>
+  </div>
+</div>
 
- <ion-item>
-   <ion-range min="20" max="80" step="2" [(ngModel)]="brightness">
-     <ion-icon small range-left name="sunny"></ion-icon>
-     <ion-icon range-right name="sunny"></ion-icon>
-   </ion-range>
- </ion-item>
-
-  <ion-item>
-    <ion-label>step=100, snaps, </ion-label>
-    <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary" [(ngModel)]="singleValue4"></ion-range>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>dual, step=3, snaps, </ion-label>
-    <ion-range dualKnobs="true" [(ngModel)]="dualValue2" min="21" max="72" step="3" snaps="true"></ion-range>
-  </ion-item>
-</ion-list>
 </ion-content>
 </ion-view>
 
