@@ -94,5 +94,10 @@ angular.module('starter.controllers', [])
       $scope.$broadcast('scroll.refreshComplete');
     });
   };
+
+  $scope.setting = function() {
+    console.log("toto");
+    $location.path('/app/setting');
+  }
 });
 

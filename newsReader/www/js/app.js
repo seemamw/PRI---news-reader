@@ -88,6 +88,16 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
 	 authStatus: true
   })
 
+  .state('app.setting', {
+    url: '/setting',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/setting.html',
+    controller: 'DashCtrl'
+      }
+     },
+   authStatus: true
+  })
 
     .state('app.profiles', {
       url: '/profiles',
