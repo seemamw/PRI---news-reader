@@ -1,9 +1,13 @@
 <ion-view view-title="Setting" hide-back-button="true">
-<ion-content class="outer-content">
-  <h4>At what time do you wake up ?</h4>
-  <br><br><br>
-
-</ion-content>
+	<ion-content class="outer-content">
+	  <h4>At what time do you wake up ?</h4>
+	  <br><br><br>
+		<ion-list>
+		    <div class="item" ion-datetime-picker ng-model="datetimeValue">
+		        {{datetimeValue| date: "yyyy-mm-dd H:mm:ss"}}
+		    </div>
+		</ion-list>
+	</ion-content>
 </ion-view>
 
 
