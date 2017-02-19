@@ -1,19 +1,20 @@
 {
   "name": "ionic-timepicker",
-  "version": "0.4.0",
+  "version": "1.0.2",
   "authors": [
-    "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>"
+    "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>",
+    "dionesandrade <diones.andrade@gmail.com>"
   ],
-  "description": "A timepicker component for Ionic framework",
+  "description": "A timepicker for Ionic framework",
   "main": [
-    "./dist/ionic-timepicker.bundle.min.js"
+    "./dist/templates.js",
+    "./dist/ionic-timepicker.js",
+    "./dist/style.css"
   ],
   "keywords": [
-    "ionic-timepicker",
     "ionic",
-    "time picker",
-    "time picker for ionic",
-    "time picker for ionic framework"
+    "timepicker",
+    "ionic-timepicker"
   ],
   "license": "MIT",
   "homepage": "https://github.com/rajeshwarpatlolla",
@@ -25,16 +26,15 @@
     "tests"
   ],
   "dependencies": {
-    "ionic": ">=0.9.27"
+    "ionic": ">=1.0"
   },
-  "_release": "0.4.0",
+  "_release": "1.0.2",
   "_resolution": {
     "type": "version",
-    "tag": "v0.4.0",
-    "commit": "9b6a004098f260c7d1988c59b6942eae7e2d5b32"
+    "tag": "v1.0.2",
+    "commit": "a2664977ec1076686a3797c45173d7e06cbe7a65"
   },
-  "_source": "https://github.com/rajeshwarpatlolla/ionic-timepicker.git",
-  "_target": "0.4.0",
-  "_originalSource": "ionic-timepicker",
-  "_direct": true
+  "_source": "https://github.com/Diones/ionic-timepicker.git",
+  "_target": "^1.0.2",
+  "_originalSource": "ionic-timepicker-dfandrade"
 }
