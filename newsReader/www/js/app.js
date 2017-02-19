@@ -4,8 +4,8 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
-  'jett.ionic.filter.bar'/*, 'ionic-timepicker'*/])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',
+  'jett.ionic.filter.bar'])
 
 .run(function($ionicPlatform , $rootScope, $timeout) {
   $ionicPlatform.ready(function() {
@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
 
 })
 
-.config(function($stateProvider, $urlRouterProvider/*, ionicTimePickerProvider*/) {
+.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
     .state('app', {
@@ -93,21 +93,11 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
     views: {
       'menuContent': {
         templateUrl: 'templates/setting.html',
-    controller: 'SetCtrl'
+    //controller: 'SetCtrl'
       }
      },
    authStatus: true
   })
-
-    .state('app.profiles', {
-      url: '/profiles',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/profiles.html',
-          controller: 'ProfilesCtrl'
-        }
-      }
-    })
 
   .state('app.profile', {
     url: '/profile/:profileId',
@@ -117,18 +107,8 @@ angular.module('starter', ['ionic', 'starter.controllers' , 'starter.services',
         controller: 'ProfileCtrl'
       }
     }
-  });
+  })
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/login');
-
-/*  var timePickerObj = {
-    inputTime: (((new Date()).getHours() * 60 * 60) + ((new Date()).getMinutes() * 60)),
-    format: 12,
-    step: 15,
-    setLabel: 'Set',
-    closeLabel: 'Close'
-  };
-  ionicTimePickerProvider
-  ionicTimePickerProvider.configTimePicker(timePickerObj);*/
-});
+  $urlRouterProvider.otherwise('/app/login')
+;});

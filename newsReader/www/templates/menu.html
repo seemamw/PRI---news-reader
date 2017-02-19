@@ -16,13 +16,12 @@
   <ion-side-menu side="left" class="loginBg" >
     <ion-header-bar class="bar-stable bar-positive">
       <h1 class="title">Menu</h1>
-      <a menu-toggle="right" class="button button-icon icon ion-settings" ng-click="setting();"></a>
+      <a menu-toggle="right" class="button button-icon icon ion-settings" menu-close href="#/app/setting"></a>
 
     </ion-header-bar>
     <ion-content >
       <ion-list inset id="menuLinks">
         <ion-item menu-close href="#/app/dashboard"> Dashboard </ion-item>
-        <ion-item menu-close href="#/app/setting"> Setting</ion-item>
 		<ion-item menu-close href="#" ng-click="logout()"> Logout </ion-item>
       </ion-list>
     </ion-content>
