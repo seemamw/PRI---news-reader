@@ -48,7 +48,7 @@ angular.module('starter.controllers', [])
 	$scope.profile = Profiles.get($stateParams.profileId);
 })
 
-.controller('SetCtrl', function (ionicTimePicker) {
+/*.controller('SetCtrl', function (ionicTimePicker) {
 
   var ipObj1 = {
     callback: function (val) {      //Mandatory
@@ -67,7 +67,7 @@ angular.module('starter.controllers', [])
 
   ionicTimePicker.openTimePicker(ipObj1);
 })
-
+*/
 
 .controller('DashCtrl', function($http, $scope, $stateParams , Profiles, $ionicFilterBar) {
   $scope.stories = [];
