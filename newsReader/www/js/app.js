@@ -99,6 +99,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services',
    authStatus: true
   })
 
+  .state('app.add-rss', {
+    url: '/add-rss',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/add-rss.html',
+    //controller: 'SetCtrl'
+      }
+     },
+   authStatus: true
+  })
+
   .state('app.profile', {
     url: '/profile/:profileId',
     views: {
