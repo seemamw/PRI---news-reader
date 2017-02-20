@@ -3,11 +3,17 @@
 	    <br>
 	    <h4>At what time do you wake up ?</h4>
 	    <br>
-	  		<ion-list>
-			    <div class="item" ion-datetime-picker time ng-model="timeValue">
-			        {{timeValue| date: "H:mm"}}
-			    </div>
-		    </ion-list>
+  		<ion-list>
+		    <div class="item" ion-datetime-picker time ng-model="timeValue">
+		        {{timeValue| date: "H:mm"}}
+		    </div>
+	    </ion-list>
+		<br>
+		<h4>Size news</h4>
+		<label class="item item-input">
+	  		<span class="input-label">Size (MB)</span>
+	  		<input type="number">
+		</label>
 	</ion-content>
 </ion-view>
 
